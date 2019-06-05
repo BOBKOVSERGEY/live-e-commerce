@@ -14,4 +14,10 @@ class ProductController extends Controller
     $this->view->render('product/index');
   }
 
+  public function detailsAction()
+  {
+    //$this->view->setSiteTitle('Каталог продуктов');
+    $this->view->render('product/details');
+  }
+
 }
