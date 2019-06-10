@@ -22,3 +22,6 @@
 .navbar-dark .dropdown-item.active, .navbar-dark .dropdown-item:active {
   background-color: #343a40;
 }
+img {
+  max-width: 100%;
+}
