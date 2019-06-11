@@ -1,8 +1,6 @@
 <?php
 namespace App\Models;
 use Core\Model;
-use App\Models\Users;
-use App\Models\UserSessions;
 use Core\Cookie;
 use Core\Session;
 use Core\Validators\MinValidator;

@@ -16,7 +16,7 @@ class ProductController extends Controller
 
   public function detailsAction()
   {
-    //$this->view->setSiteTitle('Каталог продуктов');
+    $this->view->setSiteTitle('Some product');
     $this->view->render('product/details');
   }
 

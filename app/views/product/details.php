@@ -8,10 +8,11 @@
     <img src="https://cdn10.bigcommerce.com/s-cbajx/products/7157/images/8911/GUEST_9d25776b-4e83-4a12-a25f-2c78489b1222__64102.1546117487.1280.1280.jpg" alt="">
   </div>
   <div class="col-md-6">
-    <p>Price</p>
-    <p>OldPrice</p>
-    <p>Shipping</p>
-    <p>Vendor</p>
+    <p>Price $48</p>
+    <p>Shipping: $7.99</p>
+    <p>Total: $7.99</p>
+    <p>Vendor: JJ</p>
+    <p>Brand: Cosmos</p>
     <div>
       <button class="btn btn-info"><i class="fas fa-shopping-cart"></i> Add to cart</button>
     </div>
