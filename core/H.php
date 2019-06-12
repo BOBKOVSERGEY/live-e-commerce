@@ -10,6 +10,12 @@ class H {
     echo '</pre>';
     die();
   }
+  public static function debug($data) {
+    echo '<pre>';
+    print_r($data);
+    echo '</pre>';
+    die();
+  }
 
   public static function currentPage() {
     $currentPage = $_SERVER['REQUEST_URI'];
