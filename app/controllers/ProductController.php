@@ -27,7 +27,7 @@ class ProductController extends Controller
 
     $this->view->product = $product;
 
-    $this->view->setSiteTitle('Some product');
+    $this->view->setSiteTitle($product->title);
     $this->view->render('product/details');
   }
 
