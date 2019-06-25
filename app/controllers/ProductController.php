@@ -7,6 +7,7 @@ namespace App\Controllers;
 use App\Models\Products;
 use Core\Controller;
 use Core\H;
+use Exception;
 
 class ProductController extends Controller
 {
@@ -24,6 +25,8 @@ class ProductController extends Controller
       'bind' => [$product_id]
     ]);
     //H::debug($product);
+
+
 
     $this->view->product = $product;
 

@@ -4,12 +4,17 @@
     "Home" : ["*"],
     "Register" : ["login", "register"],
     "Restricted" : ["*"],
-    "Product" : ["*"]
+    "Product" : ["*"],
+    "Admindashboard" : ["*"]
   },
   "LoggedIn" : {
     "denied" : {
       "Register" : ["login", "register"]
     },
     "Register" : ["logout"]
+  },
+  "SuperAdmin" : {
+    "denied" : {},
+    "AdminDashboard" : ["*"]
   }
 }
