@@ -5,7 +5,7 @@
     "Register" : ["login", "register"],
     "Restricted" : ["*"],
     "Product" : ["*"],
-    "Admindashboard" : ["*"]
+    "Adminproduct" : ["*"]
   },
   "LoggedIn" : {
     "denied" : {
@@ -15,6 +15,6 @@
   },
   "SuperAdmin" : {
     "denied" : {},
-    "AdminDashboard" : ["*"]
+    "Admindashboard" : ["*"]
   }
 }

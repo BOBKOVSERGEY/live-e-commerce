@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Июн 12 2019 г., 23:09
+-- Время создания: Июн 27 2019 г., 21:22
 -- Версия сервера: 5.7.23
 -- Версия PHP: 7.0.32
 
@@ -67,7 +67,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `created_at`, `updated_at`, `title`, `description`, `vendor`, `brand`, `category`, `list_price`, `price`, `shipping`, `deleted`) VALUES
-(1, '2019-06-11 00:00:00', '2019-06-11 00:00:00', 'Catan', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus eaque esse facere maiores nemo sapiente suscipit tempora totam? Ab accusantium aliquam amet eaque, hic iure molestiae porro quae voluptate!', 1, 1, 1, '78.99', '48.99', '7.99', 0);
+(1, '2019-06-11 00:00:00', '2019-06-11 00:00:00', 'Catan', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus eaque esse facere maiores nemo sapiente suscipit tempora totam? Ab accusantium aliquam amet eaque, hic iure molestiae porro quae voluptate!</p>', 1, 1, 1, '78.99', '48.99', '7.99', 0);
 
 -- --------------------------------------------------------
 
@@ -93,7 +93,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `created_at`, `updated_at`, `username`, `email`, `password`, `fname`, `lname`, `acl`, `deleted`) VALUES
-(1, '2019-06-02 18:15:13', '2019-06-02 18:15:13', 'sergey_bobkov', 'sergey_bobkov@inbox.ru', '$2y$10$by4lvRxlwxtoV.tWllnVFOi.d5ILt7XMuR3LUn0781kqlSOsF1LWa', 'Sergey', 'Bobkov', NULL, 0);
+(1, '2019-06-02 18:15:13', '2019-06-02 18:15:13', 'sergey_bobkov', 'sergey_bobkov@inbox.ru', '$2y$10$by4lvRxlwxtoV.tWllnVFOi.d5ILt7XMuR3LUn0781kqlSOsF1LWa', 'Sergey', 'Bobkov', '[\"SuperAdmin\"]', 0);
 
 -- --------------------------------------------------------
 
@@ -109,13 +109,6 @@ CREATE TABLE `user_sessions` (
   `session` varchar(255) DEFAULT NULL,
   `user_agent` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Дамп данных таблицы `user_sessions`
---
-
-INSERT INTO `user_sessions` (`id`, `created_at`, `updated_at`, `user_id`, `session`, `user_agent`) VALUES
-(1, '2019-06-02 18:16:05', '2019-06-02 18:16:05', 1, 'd645920e395fedad7bbbed0eca3fe2e0', 'Mozilla (Windows NT 10.0; Win64; x64) AppleWebKit (KHTML, like Gecko) Chrome Safari');
 
 --
 -- Индексы сохранённых таблиц
@@ -181,7 +174,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `user_sessions`
 --
 ALTER TABLE `user_sessions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
