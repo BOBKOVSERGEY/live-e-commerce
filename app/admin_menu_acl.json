@@ -1,0 +1,9 @@
+{
+  "Home" : "home",
+  "Dashboard" : "admindashboard",
+  "Products" : {
+    "View Products" : "adminproduct",
+    "seperator" : " ",
+    "Add Product" : "adminproduct/add"
+  }
+}
