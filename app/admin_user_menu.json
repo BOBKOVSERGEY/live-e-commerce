@@ -1,0 +1,8 @@
+{
+  "Login" : "register/login",
+  "Register" : "register/register",
+  "Visit Site": "home",
+  "%USERNAME%" : {
+    "Logout" : "register/logout"
+  }
+}

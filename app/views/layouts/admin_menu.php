@@ -3,7 +3,7 @@
   use Core\H;
   use App\Models\Users;
   $menu = Router::getMenu('admin_menu_acl');
-  $userMenu = Router::getMenu('user_menu');
+  $userMenu = Router::getMenu('admin_user_menu');
 ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top mb-5">
   <!-- Brand and toggle get grouped for better mobile display -->
