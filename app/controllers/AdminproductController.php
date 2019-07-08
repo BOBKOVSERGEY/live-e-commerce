@@ -9,11 +9,20 @@ use Core\H;
 
 class AdminproductController extends Controller
 {
+  public function __construct($controller, $action)
+  {
+    parent::__construct($controller, $action);
+    $this->view->setLayout('admin');
+  }
 
   public function indexAction()
   {
-    $this->view->setLayout('admin');
     $this->view->render('admin/product/index');
+  }
+
+  public function addAction()
+  {
+    $this->view->render('admin/product/add');
   }
 
 }
