@@ -22,6 +22,7 @@ class AdminproductController extends Controller
 
   public function addAction()
   {
+    $this->view->formAction = PROOT . 'adminproduct/add';
     $this->view->render('admin/product/add');
   }
 
