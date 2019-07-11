@@ -2,7 +2,7 @@
 <?php $this->start('body'); ?>
   <h1>Add New Product</h1>
   <div class="row">
-    <div class="col-md-10 mx-auto">
+    <div class="col-md-12">
       <?php $this->partial('admin/product', 'form'); ?>
     </div>
   </div>

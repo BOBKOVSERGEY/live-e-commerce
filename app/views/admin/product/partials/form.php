@@ -4,7 +4,15 @@
 <form action="<?php echo $this->formAction; ?>" method="post" enctype="multipart/form-data">
 
   <?php echo FH::csrfInput(); ?>
-
+  <?= FH::displayErrors($this->displayErrors) ?>
+  <div class="row">
+    <div class="col-md-4">
+      <?= FH::inputBlock('text','Name','name', '', ['class'=>'form-control'],['class'=>'form-group'],$this->displayErrors) ?>
+    </div>
+    <div class="col-md-4">
+      <?= FH::inputBlock('text','Price','price', '', ['class'=>'form-control'],['class'=>'form-group'],$this->displayErrors) ?>
+    </div>
+  </div>
   <!--<div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
