@@ -120,6 +120,7 @@ class FH {
    * @param  array         $errors     (optional) Pass in the form errors
    * @return string                    Returns an html string for textarea block
    */
+  //$type, $label, $name, $value='', $inputAttrs=[], $divAttrs=[],$errors=[]
   public static function textareaBlock($label,$name,$value,$inputAttrs=[],$divAttrs=[],$errors=[]){
     $inputAttrs = self::appendErrorClass($inputAttrs,$errors,$name,'is-invalid');
     $divString = self::stringifyAttrs($divAttrs);
