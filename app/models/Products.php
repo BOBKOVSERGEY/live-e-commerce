@@ -5,6 +5,12 @@ namespace App\Models;
 
 
 use Core\Model;
+use Core\Validators\EmailValidator;
+use Core\Validators\MatchesValidator;
+use Core\Validators\MaxValidator;
+use Core\Validators\MinValidator;
+use Core\Validators\RequiredValidator;
+use Core\Validators\UniqueValidator;
 
 class Products extends Model
 {
@@ -25,5 +31,15 @@ class Products extends Model
   public function beforeSave()
   {
     $this->timeStamps();
+  }
+
+  public function validator()
+  {
+    $this->runValidation(new RequiredValidator($this,['field'=>'name','msg'=>'Name is required.']));
+    $this->runValidation(new RequiredValidator($this,['field'=>'price','msg'=>'Price is required.']));
+    $this->runValidation(new RequiredValidator($this,['field'=>'list','msg'=>'Price List is required.']));
+    $this->runValidation(new RequiredValidator($this,['field'=>'shipping','msg'=>'Shipping is required.']));
+    $this->runValidation(new RequiredValidator($this,['field'=>'description','msg'=>'Description is required.']));
+
   }
 }

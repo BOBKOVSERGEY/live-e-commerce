@@ -322,7 +322,7 @@ class Model {
    * @method timeStamps
    */
   public function timeStamps(){
-    $dt = new \DateTime("now", new \DateTimeZone("UTC"));
+    $dt = new \DateTime("now", new \DateTimeZone("Europe/Moscow"));
     $now = $dt->format('Y-m-d H:i:s');
     $this->updated_at = $now;
     if($this->isNew()){
