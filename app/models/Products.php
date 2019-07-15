@@ -12,16 +12,18 @@ class Products extends Model
   public $id;
   public $created_at;
   public $updated_at;
-  public $title;
-  public $description;
-  public $vendor;
-  public $brand;
-  public $category;
-  public $list_price;
+  public $name;
   public $price;
+  public $list;
   public $shipping;
+  public $description;
   public $deleted = 0;
 
   protected static $_table='products';
   protected static $_softDelete = true;
+
+  public function beforeSave()
+  {
+    $this->timeStamps();
+  }
 }

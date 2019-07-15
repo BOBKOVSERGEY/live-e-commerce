@@ -4,6 +4,7 @@
 namespace App\Controllers;
 
 
+use App\Models\Products;
 use Core\Controller;
 use Core\H;
 
@@ -22,7 +23,18 @@ class AdminproductController extends Controller
 
   public function addAction()
   {
-    $this->view->displayErrors = [];
+    $product = new Products();
+    //$product->name = 'Default Name';
+
+    if ($this->request->isPost()) {
+      $this->request->csrfCheck();
+      $product->assign($this->request->get());
+      $product->save();
+    }
+
+    $this->view->product = $product;
+
+    $this->view->displayErrors = $product->getErrorMessages();
     $this->view->formAction = PROOT . 'adminproduct/add';
     $this->view->render('admin/product/add');
   }
