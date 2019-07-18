@@ -216,6 +216,19 @@ class FH {
     return $html;
   }
 
+  public static function displayErrorsAlert($errors) {
+
+    $html = '<div class="alert alert-danger alert-dismissible fade show" role="alert">';
+    foreach($errors as $field => $error) {
+      $html .= '<p>'.$error.'</p>';
+    }
+    $html .= '<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+    </div>';
+    return $html;
+  }
+
 
   /**
    * adds an error class name to attrs if there is an error
