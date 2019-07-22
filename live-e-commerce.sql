@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Июн 27 2019 г., 21:22
+-- Время создания: Июл 22 2019 г., 21:04
 -- Версия сервера: 5.7.23
 -- Версия PHP: 7.0.32
 
@@ -49,16 +49,13 @@ INSERT INTO `migrations` (`id`, `migration`) VALUES
 
 CREATE TABLE `products` (
   `id` int(11) NOT NULL,
-  `created_at` datetime DEFAULT NULL,
-  `updated_at` datetime DEFAULT NULL,
-  `title` varchar(255) DEFAULT NULL,
-  `description` text,
-  `vendor` int(11) DEFAULT NULL,
-  `brand` int(11) DEFAULT NULL,
-  `category` int(11) NOT NULL,
-  `list_price` decimal(10,2) NOT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL,
+  `name` varchar(255) NOT NULL,
   `price` decimal(10,2) NOT NULL,
+  `list` decimal(10,2) NOT NULL,
   `shipping` decimal(10,2) NOT NULL,
+  `description` text NOT NULL,
   `deleted` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -66,8 +63,9 @@ CREATE TABLE `products` (
 -- Дамп данных таблицы `products`
 --
 
-INSERT INTO `products` (`id`, `created_at`, `updated_at`, `title`, `description`, `vendor`, `brand`, `category`, `list_price`, `price`, `shipping`, `deleted`) VALUES
-(1, '2019-06-11 00:00:00', '2019-06-11 00:00:00', 'Catan', '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus eaque esse facere maiores nemo sapiente suscipit tempora totam? Ab accusantium aliquam amet eaque, hic iure molestiae porro quae voluptate!</p>', 1, 1, 1, '78.99', '48.99', '7.99', 0);
+INSERT INTO `products` (`id`, `created_at`, `updated_at`, `name`, `price`, `list`, `shipping`, `description`, `deleted`) VALUES
+(1, '2019-07-15 10:32:13', '2019-07-15 10:32:13', 'some', '5.00', '5.00', '5.00', 'ddddddddddddddd', 0),
+(2, '2019-07-15 21:39:09', '2019-07-15 21:39:09', 'some product', '500.00', '600.00', '700.00', 'some body', 0);
 
 -- --------------------------------------------------------
 
@@ -126,10 +124,7 @@ ALTER TABLE `migrations`
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `deleted` (`deleted`),
-  ADD KEY `vendor` (`vendor`),
-  ADD KEY `brand` (`brand`),
-  ADD KEY `category` (`category`);
+  ADD KEY `deleted` (`deleted`);
 
 --
 -- Индексы таблицы `users`
@@ -162,7 +157,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT для таблицы `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
