@@ -1,4 +1,12 @@
 <?php $this->setSiteTitle("Add New Product"); ?>
+<?php $this->start('head'); ?>
+  <!--<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+  <script>
+    tinymce.init({
+      selector: '#description',
+    });
+  </script>-->
+<?php $this->end(); ?>
 <?php $this->start('body'); ?>
   <h1>Add New Product</h1>
   <div class="row">
