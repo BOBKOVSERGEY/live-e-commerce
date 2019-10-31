@@ -28,7 +28,9 @@ class AdminproductController extends Controller
 
     if ($this->request->isPost()) {
       $this->request->csrfCheck();
-      $product->assign($this->request->get());
+
+      $product->assign($this->request->get(), Products::blackList);
+      //H::dnd($product);
       $product->save();
     }
 

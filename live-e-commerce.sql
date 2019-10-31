@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Окт 15 2019 г., 22:02
+-- Время создания: Окт 31 2019 г., 12:03
 -- Версия сервера: 5.7.23
 -- Версия PHP: 7.0.32
 
@@ -58,16 +58,6 @@ CREATE TABLE `products` (
   `description` text NOT NULL,
   `deleted` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Дамп данных таблицы `products`
---
-
-INSERT INTO `products` (`id`, `created_at`, `updated_at`, `name`, `price`, `list`, `shipping`, `description`, `deleted`) VALUES
-(1, '2019-07-15 10:32:13', '2019-07-15 10:32:13', 'some', '5.00', '5.00', '5.00', 'ddddddddddddddd', 0),
-(2, '2019-07-15 21:39:09', '2019-07-15 21:39:09', 'some product', '500.00', '600.00', '700.00', 'some body', 0),
-(3, '2019-08-07 20:08:10', '2019-08-07 20:08:10', 'Бобков Сергей', '122.00', '5.00', '1.00', '&lt;p&gt;привет&lt;/p&gt;', 0),
-(4, '2019-08-07 20:08:13', '2019-08-07 20:08:13', 'Бобков Сергей', '122.00', '5.00', '1.00', '&lt;p&gt;привет&lt;/p&gt;', 0);
 
 -- --------------------------------------------------------
 
@@ -159,7 +149,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT для таблицы `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT для таблицы `users`

@@ -26,6 +26,8 @@ class Products extends Model
   public $description;
   public $deleted = 0;
 
+  const blackList = ['id', 'deleted'];
+
   protected static $_table='products';
   protected static $_softDelete = true;
 
