@@ -8,10 +8,12 @@
   </script>-->
 <?php $this->end(); ?>
 <?php $this->start('body'); ?>
+<div class="container">
   <h1>Add New Product</h1>
   <div class="row">
     <div class="col-md-12">
       <?php $this->partial('admin/product', 'form'); ?>
     </div>
   </div>
+</div>
 <?php $this->end(); ?>

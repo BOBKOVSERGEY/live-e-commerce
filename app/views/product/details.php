@@ -3,7 +3,7 @@
 <?php $this->end(); ?>
 <?php //$this->setSiteTitle($this->product->title);?>
 <?php $this->start('body'); ?>
-<h1><?php echo $this->product->title; ?></h1>
+<h1><?php echo $this->product->name; ?></h1>
 <div class="row">
   <div class="col-md-6">
     <img width="400" src="https://cdn10.bigcommerce.com/s-cbajx/products/7157/images/8911/GUEST_9d25776b-4e83-4a12-a25f-2c78489b1222__64102.1546117487.1280.1280.jpg" alt="">

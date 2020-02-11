@@ -4,6 +4,7 @@
 namespace App\Controllers;
 
 
+use App\Models\ProductImages;
 use App\Models\Products;
 use Core\Controller;
 use Core\H;
@@ -25,8 +26,12 @@ class AdminproductController extends Controller
   {
     $product = new Products();
     //$product->name = 'Default Name';
+      $productImage = new ProductImages();
 
     if ($this->request->isPost()) {
+
+        $productImage->validateImages($_FILES['productImages']);
+
       $this->request->csrfCheck();
 
       $product->assign($this->request->get(), Products::blackList);
