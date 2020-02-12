@@ -30,10 +30,19 @@ class ProductImages extends Model
         ];
 
         foreach ($files as $file) {
+            $name = $file['name'];
+
+            // check size
+            if ($file['size'] > $maxSize) {
+                $errors[$name] = $name . ' is over the max allowed size 5MB';
+            }
+
+            // checking file type
             if (!in_array(exif_imagetype($file['tmp_name']), $allowedTypes)) {
-                $name = $file['name'];
+
                 $errors[$name] = $name . ' is not allowed file type. Please use a jpeg, gif or png';
             }
+
         }
         H::dnd($errors);
     }
